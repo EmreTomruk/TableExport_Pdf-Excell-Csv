@@ -21,7 +21,7 @@ namespace TableExport_Pdf_Mvc_Word.Controllers
 
         public ActionResult GetFilterByName()
         {
-            var degerler = _db.Set<Categories>().Where(c => c.Name == "Vue.Js").ToList();
+            var degerler = _db.Set<Categories>().Where(c => c.IsActive == true).ToList();
 
             return View(degerler);
         }
